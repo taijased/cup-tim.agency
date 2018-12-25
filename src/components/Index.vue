@@ -152,6 +152,11 @@ $mp = 62px
 .black-bg
     background #000
     color #fff
+    background-image: url(../assets/grid-black.png) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
     transition background $bg-time, color $bg-time
     .hover-underline 
         color #fff
@@ -160,6 +165,11 @@ $mp = 62px
 .white-bg
     background #fff
     color #000
+    background-image: url(../assets/grid-white.png) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
     transition background $bg-time, color $bg-time
     .hover-underline 
         color #000

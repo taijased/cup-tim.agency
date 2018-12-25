@@ -16,7 +16,7 @@
                 .letter c
                 .letter y
         footer 
-            div Say hello:
+            div(style="margin-bottom:-19px;") Say hello:
             div(class="hover-underline") hello@<br/>tim.agency
         aside.creative creative
         aside.design design
@@ -56,7 +56,7 @@ export default {
 $lp = 10%
 $tm = .3s
 $bg-time = .5s
-$mp = 62px
+$mp = 50px
 
 .wrapper
     height 100vh

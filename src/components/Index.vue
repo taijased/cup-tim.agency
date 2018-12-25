@@ -1,22 +1,22 @@
 <template lang="pug">
     .wrapper(:class="{'black-bg': !color, 'white-bg': color}")
-        header Site in progress
+        header(class="fade-in-top") Site in progress
         main 
-            div(v-if="color", @click="colorBlack()", class="hover-underline") {{status}}
-            div(v-else @click="colorWhite()", class="hover-underline") {{status}}
+            div(v-if="color", @click="colorBlack()", class="hover-underline", class="fade-in-left") {{status}}
+            div(v-else @click="colorWhite()", class="hover-underline", class="fade-in-left") {{status}}
             .title
-                .letter t
-                .letter i
-                .letter m
+                .letter.fade-in-top-delay-1 t
+                .letter.fade-in-top-delay-2 i
+                .letter.fade-in-top-delay-3 m
                 .space
-                .letter a
-                .letter g
-                .letter e
-                .letter n
-                .letter c
-                .letter y
+                .letter.fade-in-top-delay-4 a
+                .letter.fade-in-top-delay-5 g
+                .letter.fade-in-top-delay-6 e
+                .letter.fade-in-top-delay-7 n
+                .letter.fade-in-top-delay-8 c
+                .letter.fade-in-top-delay-9 y
         footer 
-            div(style="margin-bottom:-19px;") Say hello:
+            div(style="margin-bottom:-19px;", class="fade-in-bottom") Say hello:
             div(class="hover-underline") hello@<br/>tim.agency
         aside.creative creative
         aside.design design

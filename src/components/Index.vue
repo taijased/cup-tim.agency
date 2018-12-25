@@ -3,7 +3,7 @@
         header Site in progress
         main 
             div(v-if="color", @click="colorBlack()", class="hover-underline") {{status}}
-            div(v-else @click="colorWhite()") {{status}}
+            div(v-else @click="colorWhite()", class="hover-underline") {{status}}
             .title
                 .letter t
                 .letter i
@@ -126,6 +126,25 @@ $mp = 62px
         bottom 0
         left 0
         right 0
+    .hover-underline
+        display inline-block
+        position relative
+        // color #000
+        &::after 
+            content ''
+            position absolute
+            width 100%
+            transform scaleX(0)
+            height 2px
+            bottom 0
+            left 0
+            // background-color #000
+            transform-origin bottom right
+            transition transform 0.25s ease-out
+        &:hover 
+            &::after 
+                transform scaleX(1)
+                transform-origin bottom left
 .black 
     color #000
 .white 
@@ -134,28 +153,17 @@ $mp = 62px
     background #000
     color #fff
     transition background $bg-time, color $bg-time
+    .hover-underline 
+        color #fff
+        &::after 
+            background-color #fff
 .white-bg
     background #fff
     color #000
     transition background $bg-time, color $bg-time
-.hover-underline
-	display inline-block
-	position relative
-	color #000
-	&::after 
-		content ''
-		position absolute
-		width 100%
-		transform scaleX(0)
-		height 2px
-		bottom 0
-		left 0
-		background-color #000
-		transform-origin bottom right
-		transition transform 0.25s ease-out
-	&:hover 
-		&::after 
-			transform scaleX(1)
-			transform-origin bottom left
+    .hover-underline 
+        color #000
+        &::after 
+            background-color #000
 
 </style>

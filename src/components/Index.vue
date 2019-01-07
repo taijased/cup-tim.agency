@@ -174,8 +174,8 @@ $mp = 50px
             z-index 99
         .creative
             position absolute
-            right 0
-            bottom 46px
+            right -170px
+            bottom 258px
             transform rotate(-90deg)
             z-index 99
     footer 
@@ -194,13 +194,13 @@ $mp = 50px
             height 2px
             bottom 0
             left 0
-            // background-color #000
             transform-origin bottom right
             transition transform 0.25s ease-out
         &:hover 
             &::after 
                 transform scaleX(1)
                 transform-origin bottom left
+        
 .black 
     color #000
 .white 

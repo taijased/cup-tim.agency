@@ -3,20 +3,16 @@
     video#videobcg(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0')
       source(src='./assets/smoke.mp4', type='video/webm')
       |           Sorry, your browser does not support HTML5 video.
-    NewIndex
-    //- Test
+    Index
 </template>
 
 <script>
-// import Index from './components/Index.vue'
-import NewIndex from './components/NewIndex.vue'
-// import Test from './components/Test.vue'
+import Index from './components/Index.vue'
 
 export default {
   name: 'app',
   components: {
-    NewIndex,
-    // Test
+    Index
   }
 }
 </script>

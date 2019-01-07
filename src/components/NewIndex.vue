@@ -174,8 +174,8 @@ $mp = 50px
             z-index 99
         .creative
             position absolute
-            right 0
-            bottom 46px
+            right -170px
+            bottom 258px
             transform rotate(-90deg)
             z-index 99
     footer 

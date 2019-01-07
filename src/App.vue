@@ -1,15 +1,22 @@
 <template lang="pug">
   #app
-    Index
+    video#videobcg(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0')
+      source(src='./assets/smoke.mp4', type='video/webm')
+      |           Sorry, your browser does not support HTML5 video.
+    NewIndex
+    //- Test
 </template>
 
 <script>
-import Index from './components/Index.vue'
+// import Index from './components/Index.vue'
+import NewIndex from './components/NewIndex.vue'
+// import Test from './components/Test.vue'
 
 export default {
   name: 'app',
   components: {
-    Index
+    NewIndex,
+    // Test
   }
 }
 </script>
@@ -21,5 +28,14 @@ body
   font-family 'TT Norms Regular', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  overflow hidden
+#videobcg 
+  position fixed
+  top 0
+  left 0
+  width 100%
+  min-width 200%
+  z-index -1
+  pointer-events none
   overflow hidden
 </style>

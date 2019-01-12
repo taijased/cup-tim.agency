@@ -34,9 +34,9 @@
         .mail 
             transition-group(name="fade-in-bottom", mode="in-out", tag="footer")
                 .status(v-if="color", key="bottom-2-black", class="hover-underline")
-                    a(href="mailto:vlad@htmlbook.ru") hello@<br/>tim.agency
+                    a(href="mailto:hello@tim.agency.ru") hello@<br/>tim.agency
                 .status(v-else, key="bottom-2-white", class="hover-underline") 
-                    a(href="mailto:vlad@htmlbook.ru") hello@<br/>tim.agency
+                    a(href="mailto:hello@tim.agency.ru") hello@<br/>tim.agency
         transition-group(name="fade-in-bottom", mode="in-out", tag="footer")
             .status(v-if="color", key="bottom-1-black") Say hello:
             .status(v-else, key="bottom-1-white") Say hello:

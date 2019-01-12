@@ -33,8 +33,10 @@
                     .letter y
         .mail 
             transition-group(name="fade-in-bottom", mode="in-out", tag="footer")
-                .status(v-if="color", key="bottom-2-black", class="hover-underline") hello@<br/>tim.agency
-                .status(v-else, key="bottom-2-white", class="hover-underline") hello@<br/>tim.agency
+                .status(v-if="color", key="bottom-2-black", class="hover-underline")
+                    a(href="mailto:vlad@htmlbook.ru") hello@<br/>tim.agency
+                .status(v-else, key="bottom-2-white", class="hover-underline") 
+                    a(href="mailto:vlad@htmlbook.ru") hello@<br/>tim.agency
         transition-group(name="fade-in-bottom", mode="in-out", tag="footer")
             .status(v-if="color", key="bottom-1-black") Say hello:
             .status(v-else, key="bottom-1-white") Say hello:
@@ -116,6 +118,7 @@ export default {
         flex-direction row
         justify-content flex-start
         align-items flex-end
+        margin-left -40px
     aside 
         grid-column-start 4
         grid-column-end 5
@@ -129,30 +132,49 @@ $bg-time = .5s
 $mp = 50px
 
 .wrapper
-    
     header 
         .status 
             position absolute
-        font-family 'TT Norms Regular'
-        font-size 16px
+            font-family 'TT Norms Regular'
+            font-size 16px
     main 
         .status 
             position absolute
     .main-title
         .title 
             position absolute
-            margin-top -25px
+            margin-top -35px
             display flex
             flex-direction row
             justify-content flex-start
             align-items center
+            @media (max-width: 1300px)
+                margin-top -25px
+            @media (max-width: 1024px)
+                margin-top -15px
+            @media (max-width: 768px)
+                margin-top -5px
+            @media (max-width: 425px)
+                margin-top 15px
+            
             .letter 
                 font-family 'TT Norms Bold'
-                font-size 120px
+                font-size 115px
+                @media (max-width: 1300px)
+                    font-size 100px 
+                @media (max-width: 1024px)
+                    font-size 90px 
+                @media (max-width: 768px)
+                    font-size 70px 
+                @media (max-width: 425px)
+                    font-size 36px
+                    letter-spacing 0px
                 text-transform uppercase
                 transform translate(0, 0)
                 transition transform $tm
+                letter-spacing -2px
                 &:hover 
+                    cursor default
                     transform translate(0, -25px)
                     transition transform $tm
             .space 
@@ -161,7 +183,16 @@ $mp = 50px
     aside 
         font-family 'TT Norms Bold'
         font-size 100px
+        @media (max-width: 1300px)
+            font-size 100px 
+        @media (max-width: 1024px)
+            font-size 90px 
+        @media (max-width: 1000px)
+            font-size 80px 
+        @media (max-width: 768px)
+            display none       
         text-transform uppercase
+        transition color $bg-time
         .correct 
             position absolute
             bottom 0
@@ -174,8 +205,8 @@ $mp = 50px
             z-index 99
         .creative
             position absolute
-            right -170px
-            bottom 258px
+            right -173px
+            bottom 242px
             transform rotate(-90deg)
             z-index 99
     footer 
@@ -183,6 +214,9 @@ $mp = 50px
         font-size 16px
         .status 
             position absolute
+            a 
+                text-decoration none
+                color inherit
     .hover-underline
         display inline-block
         position relative
@@ -197,16 +231,20 @@ $mp = 50px
             transform-origin bottom right
             transition transform 0.25s ease-out
         &:hover 
+            cursor pointer
             &::after 
                 transform scaleX(1)
                 transform-origin bottom left
         
 .black 
     color #000
+    transition color $bg-time
+
 .white 
     color #fff
+    transition color $bg-time
 .black-bg
-    // background #9E9B9E
+    background #000
     color #fff
     background-image: url(../assets/grid-black.png) ;
     background-position: center center;
@@ -219,10 +257,11 @@ $mp = 50px
         &::after 
             background-color #fff
     aside 
-        color #000
+        color #1C1B1C
+        transition color $bg-time
 
 .white-bg
-    // background #9E9B9E
+    background #fff
     color #000
     background-image: url(../assets/grid-white.png) ;
     background-position: center center;
@@ -235,6 +274,10 @@ $mp = 50px
         &::after 
             background-color #000
     aside 
-        color #fff
+        color #EEEDEE
+        transition color $bg-time
+
+
+    
 </style>
 
